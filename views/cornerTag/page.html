@@ -1,0 +1,9 @@
+<div class="corner-tag-block">
+    <div class="item-list" ng-repeat="item in itemList">
+        <div class="item-block" ng-class="$index % 4 == 0?'first-col':''">
+            <div class="item-picture"><img ng-src="{{item.loc}}"></div>
+            <div class="item-name" ng-bind="item.name"></div>
+            <div class="item-price" ng-bind="item.price | currency"></div>
+        </div>
+    </div>
+</div>
