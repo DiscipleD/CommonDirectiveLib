@@ -6,3 +6,7 @@ body {
 .noDisplay{
     display: none;
 }
+
+.clr{
+    clear: both;
+}

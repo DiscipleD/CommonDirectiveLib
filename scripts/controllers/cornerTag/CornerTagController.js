@@ -3,6 +3,7 @@
  */
 define([
     'scripts/controllers/appControllersModule',
+    'scripts/directives/cornerTag/CornerTagDirective',
     'scripts/services/common/LoadFileService'
 ],function(controllers){
     'use strict';
@@ -18,6 +19,7 @@ define([
         ];
 
         LoadFileService.loadCssFile('styles/cornerTag/page.css');
+        LoadFileService.loadCssFile('styles/cornerTag/cornerTag.css');
 
     }]);
 });
