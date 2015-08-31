@@ -1,5 +1,7 @@
 /**
  * Created by qy on 2015/8/30.
+ * Auth: DingJianzhe
+ * use: <div cdl-corner-tag tag-text="New" tag-color="#22cc99"></div>
  */
 define([
     'scripts/directives/appDirectivesModule'

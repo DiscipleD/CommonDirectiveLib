@@ -20,7 +20,7 @@ require.config({
         "jquery",
         "angular"
     ]
-    //,urlArgs: "bust=" + (new Date()).getTime()  //防止读取缓存，调试用
+    ,urlArgs: "bust=" + (new Date()).getTime()  //防止读取缓存，调试用
 });
 
 require( [

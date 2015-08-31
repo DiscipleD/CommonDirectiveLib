@@ -1,11 +1,11 @@
-.corner-tag-page .item-list{
+.page-nav-page .item-list{
     width: 100%;
     margin: 8px 0;
     height: auto;
     overflow:hidden
 }
 
-.corner-tag-page .item-block{
+.page-nav-page .item-block{
     width: 22%;
     height: 220px;
     margin-left: 4%;
@@ -20,16 +20,16 @@
     border: 1px solid #ededed;
 }
 
-.corner-tag-page .item-block.first-col{
+.page-nav-page .item-block.first-col{
     margin-left: 0;
 }
 
-.corner-tag-page .item-picture{
+.page-nav-page .item-picture{
     height: 65%;
     position: relative;
 }
 
-.corner-tag-page .item-picture img{
+.page-nav-page .item-picture img{
     margin: auto;
     position: absolute;
     top: 0;
@@ -40,12 +40,12 @@
     height: 80%;
 }
 
-.corner-tag-page .item-name{
+.page-nav-page .item-name{
     font-size: 18px;
     height: 20%;
 }
 
-.corner-tag-page .item-price{
+.page-nav-page .item-price{
     font-size: 16px;
     height: 15%;
 }

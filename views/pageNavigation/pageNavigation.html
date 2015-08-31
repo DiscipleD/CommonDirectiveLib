@@ -1,0 +1,19 @@
+<div class="pageNav">
+    <nav>
+        <ul class="pagination">
+            <li ng-class="currentPage <= 1?'readOnly':''">
+                <a aria-label="Previous" ng-click="selectPage(currentPage - 1)">
+                    <span aria-hidden="true">&lt;</span>
+                </a>
+            </li><!--
+            --><li ng-repeat="page in pages track by $index" ng-class="page === currentPage?'active':page === '...'?'label':''">
+                <a ng-click="selectPage(page)">{{page}}</a>
+            </li><!--
+            --><li ng-class="currentPage >= pageNum?'readOnly':''">
+                <a ng-click="selectPage(currentPage + 1)" aria-label="Next">
+                    <span aria-hidden="true">&gt;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

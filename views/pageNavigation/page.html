@@ -1,0 +1,85 @@
+<div class="page-nav-page">
+    <h2>Page Navigation Directive</h2>
+    <p class="introduction">A general page footer navigation, could be used in mostly website by little change.</p>
+
+    <h4>Example</h4>
+    <div class="item-list">
+        <div  ng-repeat="item in shownList track by $index">
+            <div class="item-block" ng-class="$index % 4 == 0?'first-col':''">
+                <div class="item-picture"><img ng-src="{{item.loc}}"></div>
+                <div class="item-name" ng-bind="item.name"></div>
+                <div class="item-price" ng-bind="item.price | currency"></div>
+            </div>
+        </div>
+    </div>
+    <div cdl-page-nav page-num="pageNum" current-page="currentPage" function-name="goPage(pageId)"></div>
+
+    <h4>Key Code</h4>
+    <pre>
+        <code>
+            template:
+                // pass the param to the directive
+                &lt;div cdl-page-nav page-num="pageNum" current-page="currentPage" function-name="goPage(pageId)"&gt;&lt;/div&gt;
+
+            controller:
+                // define the page change function
+                $scope.goPage = function(pageId){
+                    $scope.shownList = [];
+                    var starIndex = (pageId - 1) * $scope.pageSize;
+                    var endIndex = pageId * $scope.pageSize > $scope.itemList.length ? $scope.itemList.length : pageId * $scope.pageSize;
+                    for (var index = 0; starIndex < endIndex; index++, starIndex++){
+                    $scope.shownList[index] = $scope.itemList[starIndex];
+                    }
+                };
+
+            directive:
+                // implement the page navigation appearance, and call function reference
+                return {
+                    restrict: "EA",
+                    templateUrl: "views/pageNavigation/pageNavigation.html",
+                    scope: {
+                        pageNum: "=",
+                        currentPage: "=",
+                        functionName: "&"
+                    },
+                    link: function(scope, element, attr){
+                        scope.pageStep = 4;
+
+                        scope.pageNum = scope.pageNum ? scope.pageNum : 0;
+
+                        scope.selectPage = function(pageId){
+                            if (pageId < 1 || pageId > scope.pageNum || pageId === scope.currentPage) return;
+                            scope.renderPageNav(pageId, scope.pageNum);
+
+                            $("html,body").animate({scrollTop:"0px"}, 500);
+                            scope.functionName({pageId:pageId});
+                        };
+
+                        scope.$watch('pageNum', function(){
+                            scope.renderPageNav(scope.currentPage, scope.pageNum);
+                        });
+
+                        scope.renderPageNav = function(currentPage, pageNum){
+                            scope.pages = [];
+
+                            scope.currentPage = currentPage;
+
+                            var startPage = currentPage - scope.pageStep < 1 ? 1 : currentPage - scope.pageStep;
+                            var endPage = currentPage + scope.pageStep > pageNum ? pageNum : currentPage + scope.pageStep;
+                            if (startPage > 1) {
+                                scope.pages.push(1);
+                                scope.pages.push("...");
+                            }
+                            for (var index = startPage; index <= endPage; index++){
+                                scope.pages.push(index);
+                            }
+                            if (endPage < pageNum) {
+                                scope.pages.push("...");
+                                scope.pages.push(pageNum);
+                            }
+                        };
+                    }
+                };
+        </code>
+    </pre>
+</div>

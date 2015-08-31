@@ -1,0 +1,53 @@
+.pageNav{
+    text-align: right;
+}
+
+.pageNav .pagination>li{
+    margin: 2px;
+    padding: 0;
+    height: 36px;
+    width: 36px;
+    display: inline-block;
+    text-align: center;
+}
+
+.pageNav .pagination>li>a{
+    height: inherit;
+    width: inherit;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    line-height: 36px;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+}
+
+.pageNav .pagination>.label>a{
+    border: none;
+    height: inherit;
+    width: inherit;
+    padding: 0;
+    margin: -2px 0 0;
+    line-height: 36px;
+    cursor: default;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+.pageNav .pagination>.readOnly>a{
+    z-index: 2;
+    color: #999999;
+    cursor: default;
+}
+
+.pageNav .pagination>.active>a, .pageNav .pagination>.active>a:focus, .pageNav .pagination>.active>a:hover{
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #22cc99;
+    border-color: #22cc99;
+}
