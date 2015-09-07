@@ -26,7 +26,8 @@
     border: 1px solid #eaeaea;
 }
 
-.pageNav .pagination>.label>a{
+.pageNav .pagination label{
+    float: left;
     border: none;
     height: inherit;
     width: inherit;
@@ -35,6 +36,7 @@
     line-height: 36px;
     cursor: default;
     text-decoration: none;
+    pointer-events: none;
     background-color: inherit;
 }
 

@@ -6,8 +6,9 @@
                     <span aria-hidden="true">&lt;</span>
                 </a>
             </li><!--
-            --><li ng-repeat="page in pages track by $index" ng-class="page === currentPage?'active':page === '...'?'label':''">
-                <a ng-click="selectPage(page)">{{page}}</a>
+            --><li ng-repeat="page in pages track by $index" ng-class="page === currentPage?'active':''">
+                <label ng-if="page === '...'" ng-bind="page"></label>
+                <a ng-if="page !== '...'" ng-click="selectPage(page)">{{page}}</a>
             </li><!--
             --><li ng-class="currentPage >= pageNum?'readOnly':''">
                 <a ng-click="selectPage(currentPage + 1)" aria-label="Next">
