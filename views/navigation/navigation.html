@@ -18,8 +18,9 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Directives <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#/cornerTag">Corner Tag</a></li>
-                        <li><a href="#/pageNavigation">Page Navigation</a></li>
+                        <li ng-repeat="item in dropdownPageList">
+                            <a ng-href="{{item.url}}" ng-bind="item.title"></a>
+                        </li>
                     </ul>
                 </li>
             </ul>
