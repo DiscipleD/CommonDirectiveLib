@@ -10,6 +10,17 @@ define([
             restrict: 'EA',
             templateUrl: 'views/navigation/navigation.html',
             link: function (scope, element, attr) {
+
+                scope.dropdownPageList = [
+                    {
+                        title: 'Corner Tag',
+                        url: '#/cornerTag'
+                    },
+                    {
+                        title: 'Page Navigation',
+                        url: '#/pageNavigation'
+                    }
+                ];
             }
         };
     });
