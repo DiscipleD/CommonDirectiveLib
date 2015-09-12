@@ -1,5 +1,6 @@
 /**
- * Created by qy on 2015/8/31.
+ * Created by DJZ on 2015/8/31.
+ * Auth: DJZ
  */
 define([
     'scripts/controllers/appControllersModule',

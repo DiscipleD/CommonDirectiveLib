@@ -1,6 +1,6 @@
 /**
- * Created by qy on 2015/8/30.
- * Auth: DingJianzhe
+ * Created by DJZ on 2015/8/30.
+ * Auth: DJZ
  * use: <div cdl-corner-tag tag-text="New" tag-color="#22cc99"></div>
  */
 define([

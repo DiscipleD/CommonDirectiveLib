@@ -1,5 +1,7 @@
 /**
- * Created by qy on 2015/7/31.
+ * Created by DJZ on 2015/7/31.
+ * Auth: DJZ
+ * use: <div cdl-loader class="loader"></div>
  */
 define([
     'scripts/directives/appDirectivesModule'

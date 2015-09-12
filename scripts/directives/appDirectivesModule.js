@@ -1,5 +1,6 @@
 /**
- * Created by qy on 2015/7/29.
+ * Created by DJZ on 2015/7/29.
+ * Auth: DJZ
  */
 define([
     'angular'

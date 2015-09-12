@@ -1,9 +1,6 @@
 /**
- * Created by qy on 2015/8/31.
- */
-/**
- * Created by qy on 2015/8/13.
- * Auth: DingJianzhe
+ * Created by DJZ on 2015/8/31.
+ * Auth: DJZ
  * use: <div cdl-page-nav page-num="pageNum" current-page="currentPage" function-name="goPage(pageId)"></div>
  */
 define([
