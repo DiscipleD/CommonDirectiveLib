@@ -1,3 +1,7 @@
+/**
+ * Created by DJZ on 2015/7/29.
+ * Auth: DJZ
+ */
 require.config({
     paths: {
         "jquery": "vendor/jquery/jquery",
