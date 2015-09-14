@@ -3,10 +3,18 @@ body {
     padding-bottom: 30px;
 }
 
+.errMsg{
+    color: #a94442;
+}
+
 .noDisplay{
     display: none;
 }
 
 .clr{
     clear: both;
+}
+
+.on-mouse-hand{
+    cursor: pointer;
 }

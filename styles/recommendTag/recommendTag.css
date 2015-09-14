@@ -1,0 +1,38 @@
+#customerTagsInput{
+    width: 25%;
+}
+
+.tagsBlock{
+    line-height: inherit;
+    background-color: #fff;
+    border: 1px solid #bce8f1;
+    border-radius: 4px;
+    min-height: 37px;
+}
+
+.tagItem{
+    border: 1px solid #28a4c9;
+    border-radius: 3px;
+    padding: 2px 6px;
+    display: inline-block;
+    margin: 4px 0;
+}
+
+.tagItem + .tagItem{
+    margin-left: 10px;
+}
+
+.tagItem .close{
+    border-left: 1px solid #a94442;
+    margin-left: 4px;
+    padding-left: 4px;
+}
+
+.tagItem:hover .close{
+    opacity: .5;
+}
+
+.tagItem.selectedTag{
+    background-color: #28a4c9;
+    color: #fff;
+}

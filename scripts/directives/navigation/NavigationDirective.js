@@ -1,5 +1,7 @@
 /**
- * Created by qy on 2015/7/29.
+ * Created by DJZ on 2015/7/29.
+ * Auth: DJZ
+ * use: <nav cdl-nav></nav>
  */
 define([
     'scripts/directives/appDirectivesModule'
@@ -19,6 +21,10 @@ define([
                     {
                         title: 'Page Navigation',
                         url: '#/pageNavigation'
+                    },
+                    {
+                        title: 'Recommend Tag',
+                        url: '#/recommendTag'
                     }
                 ];
             }

@@ -1,8 +1,13 @@
+/**
+ * Created by DJZ on 2015/7/29.
+ * Auth: DJZ
+ */
 define([
     'angular',
     'scripts/app',
     'scripts/controllers/cornerTag/CornerTagController',
-    'scripts/controllers/pageNavigation/PageNavigationController'
+    'scripts/controllers/pageNavigation/PageNavigationController',
+    'scripts/controllers/recommendTag/RecommendTagController'
 ], function(angular, app) {
     'use strict';
 
@@ -18,6 +23,10 @@ define([
             .when('/pageNavigation', {
                 templateUrl: 'views/pageNavigation/page.html',
                 controller: 'PageNavigationController'
+            })
+            .when('/recommendTag', {
+                templateUrl: 'views/recommendTag/page.html',
+                controller: 'RecommendTagController'
             });
         $routeProvider.otherwise({
             redirectTo: '/'
