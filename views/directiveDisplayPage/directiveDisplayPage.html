@@ -3,17 +3,17 @@
     <p class="introduction" ng-bind="directiveInfo.introduction"></p>
 
     <div class="panel panel-info">
-        <div class="panel-heading">
-            <div class="panel-title">Example</div>
+        <div class="panel-heading expanded">
+            <div class="panel-title">Example<span class="caret"></span></div>
         </div>
         <div class="panel-body exampleDirectivePanel"></div>
     </div>
 
     <div class="panel panel-info">
-        <div class="panel-heading" ng-click="">
-            <div class="panel-title">Key Code</div>
+        <div class="panel-heading">
+            <div class="panel-title">Key Code<span class="caret"></span></div>
         </div>
-        <div class="panel-body">
+        <div class="panel-body collapse">
             <div ng-repeat="item in directiveInfo.code">
                 <h3 ng-bind="item.title"></h3>
                 <pre>

@@ -41,7 +41,7 @@ define([
                             scope.errMsg = 'Max User Tag amount is ' + scope.maxTagLength + '. Please remove some tag first.';
                             return;
                         }else if(scope.tagIndexOf(tag, scope.userTagsList) > -1){
-                            scope.errMsg = 'Tag ' + tag.text + 'is already in your Tag List.';
+                            scope.errMsg = 'Tag ' + tag.text + ' is already in your Tag List.';
                             return;
                         }else{
                             if(scope.tagIndexOf(tag, scope.recommendTagsList) !== -1){

@@ -33,3 +33,26 @@
 .introduction{
     font-size: 16px;
 }
+
+.panel .caret{
+    float: right;
+    margin: 7px 0;
+    border-top: 8px dashed;
+    border-top: 8px solid \9;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.panel .expanded .caret{
+    border-top: 0;
+    border-bottom: 8px dashed;
+    border-bottom: 8px solid \9;
+}
+
+.panel-body{
+    overflow: hidden;
+    transition:height 2s;
+    -moz-transition:height 2s; /* Firefox 4 */
+    -webkit-transition:height 2s; /* Safari and Chrome */
+    -o-transition:height 2s; /* Opera */
+}

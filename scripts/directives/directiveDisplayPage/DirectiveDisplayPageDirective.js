@@ -14,6 +14,11 @@ define([
                 var exampleDirectiveTemplate = angular.element(scope.directiveInfo.exampleUsage);
                 var exampleDirective = $compile(exampleDirectiveTemplate)(scope);
                 element.find('.exampleDirectivePanel').append(exampleDirective);
+
+                element.find('.panel-heading').on('click', function () {
+                    angular.element(this).toggleClass('expanded');
+                    angular.element(this).parent().find('.panel-body').toggleClass('collapse');
+                });
             }
         };
     }]);
