@@ -1,7 +1,7 @@
 /**
  * Created by DJZ on 2015/8/30.
  * Auth: DJZ
- * use: <div cdl-corner-tag tag-text="New" tag-color="#22cc99"></div>
+ * use: <div cdl-corner-tag tag-text="corner.text" tag-color="corner.color"></div>
  */
 define([
     'scripts/directives/appDirectivesModule'
@@ -12,8 +12,8 @@ define([
             restrict: 'EA',
             templateUrl: 'views/cornerTag/cornerTag.html',
             scope: {
-                tagText: '@',
-                tagColor: '@'
+                tagText: '=',
+                tagColor: '='
             },
             link: function(scope, element, attrs){
                 element.find('.side-corner-tag').css('background-color', scope.tagColor);

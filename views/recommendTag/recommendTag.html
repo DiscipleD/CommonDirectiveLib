@@ -2,7 +2,7 @@
     <div class="form-group">
         <label class="control-label col-lg-2" for="customerTagsInput">Customer Tag</label>
         <input type="text" id="customerTagsInput" class="form-control col-lg-3" ng-keyup="customerTagsInputKeyUp($event)"
-               placeholder='Please enter customize tag here.' maxlength="20">
+               placeholder="Please enter customize tag here." maxlength="20">
         <div class="col-lg-7">
             <button type="button" class="btn btn-info" ng-click="addCustomerTags()">Add</button>
         </div>
@@ -10,7 +10,7 @@
     <div class="form-group">
         <label class="control-label col-lg-2" for="userTagsBlock">User Tag List</label>
         <div id="userTagsBlock" class="col-lg-10 tagsBlock userTagsBlock">
-            <div class="tagItem on-mouse-hand" ng-repeat='tag in userTagsList' ng-click='removeTagSelected($index)'>
+            <div class="tagItem on-mouse-hand" ng-repeat="tag in userTagsList" ng-click="removeTagSelected($index)">
                 <span ng-bind="tag.text"></span>
                 <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
@@ -21,7 +21,7 @@
     <div class="form-group">
         <label class="control-label col-lg-2" for="recommendTagsBlock">Recommend Tag List</label>
         <div id="recommendTagsBlock" class="col-lg-10 tagsBlock recommendTagsBlock">
-            <div class="tagItem on-mouse-hand" ng-repeat='tag in recommendTagsList' ng-click='toggleTagSelect($index)'>
+            <div class="tagItem on-mouse-hand" ng-repeat="tag in recommendTagsList" ng-click="toggleTagSelect($index)">
                 <span ng-bind="tag.text"></span>
             </div>
         </div>

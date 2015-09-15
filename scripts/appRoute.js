@@ -17,20 +17,19 @@ define([
                 templateUrl: 'views/home.html'
             })
             .when('/cornerTag', {
-                templateUrl: 'views/cornerTag/page.html',
+                templateUrl: 'views/common/directiveContainPage.html',
                 controller: 'CornerTagController'
             })
             .when('/pageNavigation', {
-                templateUrl: 'views/pageNavigation/page.html',
+                templateUrl: 'views/common/directiveContainPage.html',
                 controller: 'PageNavigationController'
             })
             .when('/recommendTag', {
-                templateUrl: 'views/recommendTag/page.html',
+                templateUrl: 'views/common/directiveContainPage.html',
                 controller: 'RecommendTagController'
             });
         $routeProvider.otherwise({
             redirectTo: '/'
         });
     }]);
-
 });

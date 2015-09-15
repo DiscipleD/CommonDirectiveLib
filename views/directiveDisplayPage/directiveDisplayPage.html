@@ -1,0 +1,25 @@
+<div>
+    <h2 ng-bind="directiveInfo.title"></h2>
+    <p class="introduction" ng-bind="directiveInfo.introduction"></p>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Example</div>
+        </div>
+        <div class="panel-body exampleDirectivePanel"></div>
+    </div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading" ng-click="">
+            <div class="panel-title">Key Code</div>
+        </div>
+        <div class="panel-body">
+            <div ng-repeat="item in directiveInfo.code">
+                <h3 ng-bind="item.title"></h3>
+                <pre>
+                    <code ng-bind="item.content"></code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>

@@ -29,7 +29,7 @@ define([
                     scope.functionName({pageId:pageId});
                 };
 
-                scope.$watch('pageNum', function(){
+                scope.$watch("pageNum", function(){
                     scope.renderPageNav(scope.currentPage, scope.pageNum);
                 });
 
