@@ -6,19 +6,23 @@
         <div class="panel-heading expanded">
             <div class="panel-title">Example<span class="caret"></span></div>
         </div>
-        <div class="panel-body exampleDirectivePanel"></div>
+        <div class="collapse-body">
+            <div class="panel-body exampleDirectivePanel"></div>
+        </div>
     </div>
 
     <div class="panel panel-info">
         <div class="panel-heading">
             <div class="panel-title">Key Code<span class="caret"></span></div>
         </div>
-        <div class="panel-body collapse">
-            <div ng-repeat="item in directiveInfo.code">
-                <h3 ng-bind="item.title"></h3>
-                <pre>
-                    <code ng-bind="item.content"></code>
-                </pre>
+        <div class="collapse-body collapsed">
+            <div class="panel-body">
+                <div ng-repeat="item in directiveInfo.code">
+                    <h3 ng-bind="item.title"></h3>
+                    <pre>
+                        <code ng-bind="item.content"></code>
+                    </pre>
+                </div>
             </div>
         </div>
     </div>

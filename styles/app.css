@@ -1,6 +1,8 @@
 body {
     padding-top: 70px;
     padding-bottom: 30px;
+    /* fix window shake when scroll appearance */
+    margin-left: calc(100vw - 100%);
 }
 
 .errMsg{

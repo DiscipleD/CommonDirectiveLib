@@ -49,10 +49,30 @@
     border-bottom: 8px solid \9;
 }
 
-.panel-body{
+.collapse-body{
+    height: auto;
     overflow: hidden;
-    transition:height 2s;
-    -moz-transition:height 2s; /* Firefox 4 */
-    -webkit-transition:height 2s; /* Safari and Chrome */
-    -o-transition:height 2s; /* Opera */
+    transition:height .65s;
+    -moz-transition:height .65s;
+    -webkit-transition:height .65s;
+    -o-transition:height .65s;
 }
+
+.collapsed{
+    height: 0;
+}
+
+/* max-height solution. problem is max-height should be set, when the content height is small/huge that will be a problem.
+.collapse-body{
+    max-height: 1999px;
+    overflow: hidden;
+    transition:max-height .65;
+    -moz-transition:max-height .65;
+    -webkit-transition:max-height .65;
+    -o-transition:max-height .65;
+}
+
+.collapse{
+    max-height: 0;
+    display: block;
+}*/
