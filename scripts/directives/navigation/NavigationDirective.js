@@ -7,11 +7,24 @@ define([
     'scripts/directives/appDirectivesModule'
 ], function(directives){
     'use strict';
-    return directives.directive('cdlNav', function(){
+    return directives.directive('cdlNav', ['$rootScope', '$location', function($rootScope, $location){
         return {
             restrict: 'EA',
             templateUrl: 'views/navigation/navigation.html',
-            link: function (scope, element, attr) {
+            link: function (scope, element) {
+
+                $rootScope.$on('$routeChangeSuccess', function(){
+                    var currentPath = $location.path();
+                    var aLink = element.find(".nav.navbar-nav li a[href='#" + currentPath + "']");
+                    switch (currentPath){
+                        case '/':
+                        case '/directiveList':
+                            aLink.parent().addClass('active').siblings().removeClass('active');
+                            break;
+                        default :
+                            element.find('.dropdown').addClass('active').siblings().removeClass('active');
+                    }
+                });
 
                 scope.dropdownPageList = [
                     {
@@ -29,5 +42,5 @@ define([
                 ];
             }
         };
-    });
+    }]);
 });
