@@ -5,6 +5,7 @@
 define([
     'angular',
     'scripts/app',
+    'scripts/controllers/directiveMenuList/directiveMenuListController',
     'scripts/controllers/cornerTag/CornerTagController',
     'scripts/controllers/pageNavigation/PageNavigationController',
     'scripts/controllers/recommendTag/RecommendTagController'
@@ -15,6 +16,10 @@ define([
         $routeProvider
             .when('/', {
                 templateUrl: 'views/home.html'
+            })
+            .when('/directiveList', {
+                templateUrl: 'views/common/directiveMenuList.html',
+                controller: 'DirectiveMenuController'
             })
             .when('/cornerTag', {
                 templateUrl: 'views/common/directiveContainPage.html',

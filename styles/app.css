@@ -1,16 +1,17 @@
 body {
     padding-top: 70px;
     padding-bottom: 30px;
+    font-family: "microsoft yahei", "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     /* fix window shake when scroll appearance */
     margin-left: calc(100vw - 100%);
 }
 
-.errMsg{
-    color: #a94442;
+ul,ol{
+    list-style-type: none;
 }
 
-.noDisplay{
-    display: none;
+.errMsg{
+    color: #a94442;
 }
 
 .clr{
